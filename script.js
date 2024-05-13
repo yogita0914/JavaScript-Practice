@@ -295,3 +295,43 @@
 // };
 // car.start(); 
 // car.stop(); 
+
+
+// -----------------------------------EVENT in JavaScript---------------------------
+// Events in JavaScript are actions or occurrences that happen in the browser, such as a
+// user clicking a button, moving the mouse, typing on the keyboard, or the browser finishing
+// loading a web page. Event handling is a fundamental aspect of web development, allowing
+// developers to create interactive and dynamic web applications. Here's an overview of events
+// and event handling in JavaScript:
+
+
+// const div = document.getElementById('myDiv');
+// div.addEventListener('mouseover', function(event) {
+//     console.log('Mouse over the div!');
+// });
+
+
+// const button = document.getElementById('myButton');
+// button.addEventListener('click', function(event) {
+//     console.log('Button clicked!');
+// });
+
+
+// const input = document.getElementById('myInput');
+// input.addEventListener('keydown', function(event) {
+//     console.log('Key pressed:', event.key);
+// });
+
+
+// const form = document.getElementById('myForm');
+// form.addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     console.log('Form submitted!');
+// });
+
+
+// const select = document.getElementById('mySelect');
+// select.addEventListener('change', function(event) {
+//     console.log('Selected option:', select.value);
+// });
+
