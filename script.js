@@ -110,7 +110,7 @@
 // console.log(typeof(str));
 
 // --------------------OBJECTS --------------------
-
+// 1.
 // let person = {
 //     firstName: "Yogita",
 //     lastName: "Gautam",
@@ -120,3 +120,178 @@
 //   };
 // console.log(person.fullName());
   
+// 2.
+// const counter = {
+//     value: 0,
+//     increment: function() {
+//         this.value++;
+//     },
+//     decrement: function() {
+//         this.value--;
+//     }
+// };
+// console.log(counter.value); 
+// counter.increment();
+// console.log(counter.value); 
+// counter.decrement();
+// console.log(counter.value); 
+
+// 3.
+// let employees = {
+//     "John": 50000,
+//     "Alice": 60000,
+//     "Bob": 55000,
+//     "Emma": 62000,
+//     "Mike": 53000
+// };
+// function increaseSalaries(employees, increaseAmount) {
+//     for (let employee in employees) {
+//       employees[employee] += increaseAmount;
+//     }
+// }
+// increaseSalaries(employees, 1000);
+// console.log("Updated salaries:");
+// console.log(employees);
+
+// 4.
+// let person = {
+//   name: "Yogita",
+//   age: 20,
+//   city: "Bangaluru"
+// };
+// console.log(person.name); 
+// console.log(person["age"]);
+
+// 5.
+// let person = {
+//   _name: "Yogita",
+//   get name() {
+//       return this._name;
+//   },
+//   set name(newName) {
+//       this._name = newName;
+//   }
+// };
+// console.log(person.name); 
+// person.name = "Riya";
+// console.log(person.name); 
+
+// 6.
+// let obj1 = { a: 1, b: 2 };
+// let obj2 = { b: 3, c: 4 };
+// let mergedObj = { ...obj1, ...obj2 };
+// console.log(mergedObj);
+
+// 7.
+// let obj1 = { a: 1, b: 2 };
+// let obj2 = { a: 1, b: 2 };
+// console.log(obj1 === obj2); 
+// function compareObjects(obj1, obj2) {
+//     for (let key in obj1) {
+//         if (obj1[key] !== obj2[key]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// console.log(compareObjects(obj1, obj2));
+
+// 8.
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+// let a = new Person("Yogita", 30);
+// console.log(a.name); 
+// console.log(a.age);
+
+// 9.
+// const Bond = {
+//   firstName: "Yogita",
+//   lastName: "Kumari",
+//   getFullName: function () {
+//       return `${this.firstName} ${this.lastName}`.trim();
+//   }
+// };
+// console.log(Bond.getFullName());
+
+// 10.
+// let school = {
+//   name: 'Vivekananda School',
+//   location: 'Delhi',
+//   established: '1971',
+//   a: 1000,
+//   display: function () {
+//       console.log(`The value of the key 20 is ${school['a']}`);
+//   }
+// }
+// school.display();
+
+// 11.
+// let person = {
+// 	gender: "female"
+// }
+// let person1 = Object.create(person);
+// person1.name = "Shruti";
+// person1.age = 20;
+// person1.nationality = "Indian";
+// for (let key in person1) {
+// 	console.log(key);
+// }		 
+
+
+// 12.
+// let obj1 = { 
+// 	propfirst : "Name"
+// } 
+// console.log(obj1.propfirst); 
+// delete obj1.propfirst 
+// console.log(obj1.propfirst);			 
+
+
+// 13.
+// let parent = { x: 10 };
+// let child = Object.create(parent);
+// console.log(child.x); 
+// console.log(child.hasOwnProperty('x'));
+
+// 14.
+// let calculator = {
+//   value: 0,
+//   add: function(x) {
+//       this.value += x;
+//       return this; 
+//   },
+//   multiply: function(x) {
+//       this.value *= x;
+//       return this; 
+//   }
+// };
+// let result = calculator.add(5).multiply(2).value;
+// console.log(result); 
+
+// 15.
+// let car = {
+//   brand: "Toyota",
+//   model: "Camry",
+//   year: 2022,
+//   isRunning: false,
+//   start: function() {
+//       if (!this.isRunning) {
+//           this.isRunning = true;
+//           console.log("The car has started.");
+//       } else {
+//           console.log("The car is already running.");
+//       }
+//   },
+//   stop: function() {
+//       if (this.isRunning) {
+//           this.isRunning = false;
+//           console.log("The car has stopped.");
+//       } else {
+//           console.log("The car is already stopped.");
+//       }
+//   },
+// };
+// car.start(); 
+// car.stop(); 
