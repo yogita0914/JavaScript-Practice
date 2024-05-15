@@ -335,3 +335,56 @@
 //     console.log('Selected option:', select.value);
 // });
 
+
+// ------------------------------------Event Bubbling $ Capturing--------------------------------------
+
+// Event Bubbling-----
+
+// document.getElementById('outer').addEventListener('click', function(event) {
+//   console.log('Outer div');
+// });
+
+// document.getElementById('inner').addEventListener('click', function(event) {
+//   console.log('Inner div');
+// });
+
+
+// -----------Another way-----------
+
+// document.querySelector('.outer').addEventListener('click', function(event) {
+//     alert('Outer DIV');
+// }, false); // false means bubbling 
+
+// document.querySelector('.middle').addEventListener('click', function(event) {
+//     alert('Middle DIV');
+// }, false);
+
+// document.querySelector('.inner').addEventListener('click', function(event) {
+//     alert('Inner DIV');
+// }, false);
+
+
+
+// Event Capturing-------
+
+// document.getElementById('outer').addEventListener('click', function(event) {
+//   console.log('Outer div');
+// }, true); 
+
+// document.getElementById('inner').addEventListener('click', function(event) {
+//   console.log('Inner div');
+// }, true);
+
+// ------------------Another way--------
+
+// document.querySelector('.outer').addEventListener('click', function(event) {
+//     alert('Outer DIV');
+// }, true); // true means capturing 
+
+// document.querySelector('.middle').addEventListener('click', function(event) {
+//     alert('Middle DIV');
+// }, true); 
+
+// document.querySelector('.inner').addEventListener('click', function(event) {
+//     alert('Inner DIV');
+// }, true);
