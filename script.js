@@ -388,3 +388,18 @@
 // document.querySelector('.inner').addEventListener('click', function(event) {
 //     alert('Inner DIV');
 // }, true);
+
+
+// -------------------------MouseOver and MouseEnter---------------
+
+// document.querySelector('.outer').addEventListener("mouseover",()=>{
+//     console.log("Hovering");
+// });
+
+// document.querySelector('.outer').addEventListener('mouseleave', () => {
+//     console.log('leave');
+// });
+
+// document.querySelector('.outer').addEventListener("mouseenter",()=>{
+//     console.log("Hovering");
+// });
