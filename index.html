@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
-    <link rel="stylesheet" href="script.js">
+    
 </head>
 <body>
     <!-- event through -->
@@ -39,7 +39,7 @@
         </div>
     </div> -->
 
-    <div class="outer">
+    <!-- <div class="outer">
         Outer
         <div class="middle">
             Middle
@@ -47,6 +47,56 @@
                 Inner
             </div>
         </div>
+        https://forms.gle/CnPKD1SeShSGN6i8A
+
+    </div> -->
+
+    <div class="container">
+        <h1>Capitalize</h1>
+        <input type="text" placeholder="Enter Sentence" id="input">
+        <button id="btn">Capitalize</button>
+        <button id="reverse">Reverse</button>
+        <button id="reverseWords">Reverse Word by Word</button>
+        <p id="output"></p>
     </div>
+    <script>
+         function capitalizeSentence(sentence) {
+        return sentence.replace(/\b\w/g, function(char) {
+            return char.toUpperCase();
+        });
+    }
+    function reverseSentence(sentence) {
+        return sentence.split('').reverse().join('');
+    }
+
+    function reverseWords(sentence) {
+        return sentence.split(" ").reverse().join(" ");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const inputField = document.getElementById("input");
+        const capitalizeBtn = document.getElementById("btn");
+        const reverseBtn = document.getElementById("reverse");
+        const reverseWordsBtn = document.getElementById("reverseWords");
+        const output = document.getElementById("output");
+
+        capitalizeBtn.addEventListener("click", () => {
+            const inputValue = inputField.value;
+            const capitalizedSentence = capitalizeSentence(inputValue);
+            output.textContent = capitalizedSentence;
+        });
+        reverseBtn.addEventListener("click", () => {
+            const inputValue = inputField.value;
+            const reversedSentence = reverseSentence(inputValue);
+            output.textContent = reversedSentence;
+        });
+        reverseWordsBtn.addEventListener("click", () => {
+            const inputValue = inputField.value;
+            const reversedWordsSentence = reverseWords(inputValue);
+            output.textContent = reversedWordsSentence;
+        });
+    });
+    </script>
+  <script src="script.js"></script>
 </body>
 </html>

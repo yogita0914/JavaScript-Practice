@@ -403,3 +403,233 @@
 // document.querySelector('.outer').addEventListener("mouseenter",()=>{
 //     console.log("Hovering");
 // });
+
+
+
+
+// ---------------------Class Questions------------------------
+
+// 1 . Given a sentence, capitalize the first character of each word.
+// 	input - this is javascript
+// 	output - This Is JavaScript
+
+// function capitalSentence(sentence) {
+//     let N = sentence.split(" ");
+//     let X = N.map(n => n.charAt(0).toUpperCase() + n.slice(1));
+//     let capital = X.join(" ");
+//     return capital;
+// }
+// let a = "this is javascript";
+// let b = capitalSentence(a);
+// console.log(b);  
+
+
+// 2. Given an array of string. Return a new boolean array. If the item at each index contains the word javascript in it. It should be true else it should be false.
+// 	input - ["javascript", "react", "node"]
+// 	output - [true, false, false]
+	
+// 	input - ["java","python","c"]
+// 	output - [false, false, false]
+// function check(arr) {
+//     return arr.map(item => item.toLowerCase().includes("javascript"));
+// }
+// let A = ["javascript", "react", "node"];
+// let B = check(A);
+// console.log(B); 
+
+// let X = ["java", "python", "c"];
+// let Y = check(X);
+// console.log(Y); 
+
+
+// 3. Given a string which contains an email address, return true if the given email is valid, else return false.
+// 	input - puran@navgurukul.org
+// 	output - true
+	
+// 	input - puran@navgurukul
+// 	output - false
+	
+// 	input - puran@gmail.com
+// 	output - true
+
+// function isValidEmail(email) {
+//     const emailChar = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+//     return emailChar.test(email);
+// }
+// let email1 = "puran@navgurukul.org";
+// console.log(isValidEmail(email1)); 
+
+// let email2 = "puran@navgurukul";
+// console.log(isValidEmail(email2)); 
+
+// let email3 = "puran@gmail.com";
+// console.log(isValidEmail(email3)); 
+
+
+// 4. Given two strings, check if they are anagrams or not. If they are anagrams return true else return false.
+// 	input - below, elbow
+// 	output - true
+
+// 	input - night, thing
+// 	output - true
+// function anagrams(str1, str2) {
+//     const sortString = (str) => str.split('').sort().join('');
+//     const s = sortString(str1.toLowerCase());
+//     const s2 = sortString(str2.toLowerCase());
+//     return s === s2;
+// }
+// console.log(anagrams('below', 'elbow'));    
+// console.log(anagrams('night', 'thing'));    
+
+// 5. Reverse the given sentence.
+// 	input- i am learning javascript.
+// 	output - tpircsavaj gninrael ma i
+// function reverse(sen) {
+//     return sen.split('').reverse().join('');
+// }
+// const A = 'i am learning javascript.';
+// const B = reverse(A);
+// console.log(B); 
+
+
+// 6. Reveres the given string word by word then return the reversed string.
+// 	input - Success comes to those who work hard
+// 	output - hard work who those to comes Success
+// function reverseWords(sent) {
+//     let A = sent.split(" ");
+//     let revWords = A.reverse();
+//     let revSent = revWords.join(" ");
+//     return revSent;
+// }
+// let X = "Success comes to those who work hard";
+// let revStr = reverseWords(X);
+// console.log(revStr);
+
+
+
+// let input = document.getElementById("input");
+// let btn = document.getElementById("btn");
+// let output = document.getElementById("output");
+// let reverseBtn = document.getElementById("reverse");
+// let reverseWords = document.getElementById("reverseWords");
+
+// btn.addEventListener("click", () => {
+//     function capitalSentence(sentence) {
+//         let N = sentence.split(" ");
+//         let X = N.map(n => n.charAt(0).toUpperCase() + n.slice(1));
+//         let capital = X.join(" ");
+//         return capital;
+//     }
+//     let inputValue = "this is javascript";
+//     let b = capitalSentence(inputValue);
+//     output.innerHTML = b;
+// });
+
+// reverseBtn.addEventListener("click", () => {
+//     function reverse(sen) {
+//         return sen.split('').reverse().join('');
+//     }
+//     const A = 'i am learning javascript.';
+//     const B = reverse(A);
+//     output.innerHTML = B;
+// });
+
+// reverseWords.addEventListener("click", () => {
+//     function reverseWords(sent) {
+//         let A = sent.split(" ");
+//         let revWords = A.reverse();
+//         let revSent = revWords.join(" ");
+//         return revSent;
+//     }
+//     let inputValue = input.value;
+//     let revStr = reverseWords(inputValue);
+//     output.innerHTML = revStr;
+// });
+
+// ---------------Factorial------------------
+function factorial(n) {
+    if (n < 0) return undefined; 
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+      result *= i;
+    }
+    return result;
+  }
+  console.log(factorial(5));
+  
+//-------------------------counter---------------
+  function recursiveCounter(count, max) {
+    if (count > max) {
+      return; 
+    }
+    console.log(count); 
+    recursiveCounter(count + 1, max); 
+  }
+  recursiveCounter(1, 10); 
+  
+// -----------------------power------------------
+
+  function power(base, exponent) {
+    if (exponent === 0) {
+      return 1;
+    }
+    return base * power(base, exponent - 1);
+  }
+  console.log(power(2, 3));
+
+
+  // --------------sum of all element in arr-----------
+
+  function sumArray(arr) {
+    if (arr.length === 0) {
+      return 0;
+    }
+    return arr[0] + sumArray(arr.slice(1));
+  }
+  const arr = [1, 5, 2];
+  console.log(sumArray(arr));
+  
+
+
+// ----------Callback hell--------------
+
+function preparedFood(foodDelivered){
+  setTimeout(()=>{
+      console.log("Food is being prepared");
+      console.log("Food is ready");
+      foodDelivered();
+  }, 7000);
+
+}
+
+function deliveredFood(){
+  setTimeout(()=>{
+      console.log("Food is delivered to your table");
+  }, 3000)
+
+}
+
+function eatingFood(){
+  setTimeout(()=>{
+      console.log("Eating Food");
+  }, 2000)
+}
+
+function payment(){
+  setTimeout(()=>{
+      console.log("Payment");
+  }, 1000)
+}
+function leaveHotel(){
+  console.log("Leave the Hotel");
+}
+
+
+function visitingHotel(){
+  console.log("Entering the Hotel");
+  console.log("Order Food - Biryani ");
+  preparedFood(deliveredFood);
+  
+}
+
+visitingHotel();
